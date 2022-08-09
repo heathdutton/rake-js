@@ -44,9 +44,11 @@ export default class Parser {
     this.phrases = resultList
   }
 
-  public bestPhrases(): string[] {
+  public bestPhrases(optimalPercentage: number): string[] {
     const phrases = sortBy(this.phrases, ['score', 'text']).reverse()
-    const optimalAmount = Math.ceil(this.phrases.length / 3.0)
+    const optimalAmount = Math.ceil(
+      (100 / this.phrases.length) * optimalPercentage
+    )
     return map(take(phrases, optimalAmount), 'text')
   }
 

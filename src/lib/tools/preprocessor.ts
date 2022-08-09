@@ -13,7 +13,10 @@ export default class Preprocessor {
   }
 
   public process(corpus: string): string[] {
-    return corpus.replace(/\\[nrt]/g, '. ').split(this.splitter).filter(Boolean)
+    return corpus
+      .replace(/\\[nrt]/g, '. ')
+      .split(this.splitter)
+      .filter(Boolean)
   }
 
   private buildDelimiterRegexp() {

@@ -10,6 +10,7 @@ import load from './tools/stoplist'
 export interface IOptions {
   delimiters: string[]
   language: languageName
+  optimalPercentage: 66.6
 }
 
 // the actual parameters for the RAKE algorithm
@@ -40,5 +41,5 @@ export function rake(params: IParameters): string[] {
     phrase.calculateScore(stemScores)
   }
   parser.joinDuplicates()
-  return parser.bestPhrases()
+  return parser.bestPhrases(params.optimalPercentage)
 }

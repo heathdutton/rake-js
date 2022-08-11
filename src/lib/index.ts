@@ -5,6 +5,7 @@ import guessLanguage from './tools/guess_language'
 const defaults: IOptions = {
   delimiters: ['\\s+'],
   language: 'english',
+  optimalPercentage: 66.6,
 }
 
 export default function process(text: string, opts?: IOptions): string[] {

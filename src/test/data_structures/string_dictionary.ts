@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { skip, slow, suite, test, timeout } from 'mocha-typescript'
+import { skip, slow, suite, test, timeout } from '@testdeck/mocha'
 import StringDictionary from '../../lib/data_structures/string_dictionary'
 
 @suite(timeout(100), slow(10))

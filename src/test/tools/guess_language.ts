@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { skip, slow, suite, test, timeout } from 'mocha-typescript'
+import { skip, slow, suite, test, timeout } from '@testdeck/mocha'
 import guessLanguage from '../../lib/tools/guess_language'
 
 @suite(timeout(3000), slow(1000))

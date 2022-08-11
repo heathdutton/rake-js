@@ -9,7 +9,7 @@ export default class Phrase {
   public text: string
   public words: string[] = []
   public stems: string[] = []
-  public score: number = 0.0
+  public score = 0.0
 
   public isEmpty() {
     return this.words.length === 0
@@ -26,7 +26,7 @@ export default class Phrase {
   }
 
   public calculateStems(stemmer: Stemmer) {
-    this.stems = map(this.words, word => stemmer.stem(word))
+    this.stems = map(this.words, (word) => stemmer.stem(word))
   }
 
   public calculateScore(stemIndex: { [stem: string]: number }) {

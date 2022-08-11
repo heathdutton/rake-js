@@ -1,6 +1,6 @@
 import { expect } from 'chai'
 import { readFileSync } from 'fs'
-import { skip, slow, suite, test, timeout } from 'mocha-typescript'
+import { skip, slow, suite, test, timeout } from '@testdeck/mocha'
 import { join } from 'path'
 import { IParameters, rake } from '../lib/rake'
 
@@ -16,6 +16,7 @@ class RAKE {
                 their systems.`,
       delimiters: ['\\s+'],
       language: 'english',
+      optimalPercentage: 66.6,
     }
     const expected = [
       'video games',
@@ -37,6 +38,7 @@ class RAKE {
       corpus: readFileSync(file, 'utf-8'),
       delimiters: ['\\s+'],
       language: 'english',
+      optimalPercentage: 66.6,
     }
     const result = rake(input)
     // tslint:disable-next-line
@@ -53,6 +55,7 @@ class RAKE {
       corpus: readFileSync(file, 'utf-8'),
       delimiters: ['\\s+'],
       language: 'german',
+      optimalPercentage: 66.6,
     }
     const result = rake(input)
     // tslint:disable-next-line
@@ -69,6 +72,7 @@ class RAKE {
       corpus: readFileSync(file, 'utf-8'),
       delimiters: ['\\s+'],
       language: 'german',
+      optimalPercentage: 66.6,
     }
     const result = rake(input)
     // tslint:disable-next-line
@@ -85,6 +89,7 @@ class RAKE {
       corpus: readFileSync(file, 'utf-8'),
       delimiters: ['\\s+'],
       language: 'english',
+      optimalPercentage: 66.6,
     }
     const result = rake(input)
     // tslint:disable-next-line

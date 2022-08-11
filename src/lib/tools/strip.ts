@@ -1,4 +1,4 @@
-import * as condenseWhitespace from 'condense-whitespace'
+import condenseWhitespace from 'condense-whitespace'
 
 // replace all non-word characters from string
 export default function strip(text: string): string {

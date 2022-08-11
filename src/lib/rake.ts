@@ -10,7 +10,7 @@ import load from './tools/stoplist'
 export interface IOptions {
   delimiters: string[]
   language: languageName
-  optimalPercentage: 66.6
+  optimalPercentage: number
 }
 
 // the actual parameters for the RAKE algorithm

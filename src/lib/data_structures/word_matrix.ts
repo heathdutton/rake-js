@@ -19,7 +19,7 @@ export default class WordMatrix {
   }
 
   public process(values: string[]) {
-    const indexes = values.map(key => this.index[key])
+    const indexes = values.map((key) => this.index[key])
     for (const row of indexes) {
       for (const col of indexes) {
         this.matrix[row][col] += 1

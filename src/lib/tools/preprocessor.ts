@@ -20,7 +20,7 @@ export default class Preprocessor {
   }
 
   private buildDelimiterRegexp() {
-    const patterns = map(this.delimiters, d => '(' + d + ')')
+    const patterns = map(this.delimiters, (d) => '(' + d + ')')
     const expression = '[' + patterns.join('') + ']'
     this.splitter = new RegExp(expression, 'g')
   }

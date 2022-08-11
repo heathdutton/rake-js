@@ -3,7 +3,7 @@
  * from strings. It is able to detect the natural language on its own.
  */
 
-import * as franc from 'franc'
+import { franc } from 'franc'
 
 // currently supported natural languages
 export type languageName =

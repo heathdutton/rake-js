@@ -2,10 +2,10 @@
  * This Stemmer is a class and not a function because it must be able to track
  * all processed words and stems for later usage. You can initialize one for
  * a given language and then use its `stem` method repeatedly. It keeps track
- * of both: words and their stems, simultanously.
+ * of both: words and their stems, simultaneously.
  */
 
-import * as Snowball from 'snowball'
+import Snowball from 'snowball'
 import StringCounter from '../data_structures/string_counter'
 import StringDictionary from '../data_structures/string_dictionary'
 

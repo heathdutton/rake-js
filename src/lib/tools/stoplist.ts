@@ -9,7 +9,7 @@
  * available for many languages in the top-level 'data'-folder.
  */
 
-export default function load(language: string): Set<string> {
-  const list: string[] = require('../stopwords/' + language).default
+export default function load(language: string, stopwords: string[]): Set<string> {
+  const list: string[] = stopwords || require('../stopwords/' + language).default
   return new Set(list)
 }

@@ -6,6 +6,7 @@ const defaults: IOptions = {
   delimiters: ['\\s+'],
   language: 'english',
   optimalPercentage: 66.6,
+  stopwords: []
 }
 
 export default function process(text: string, opts?: IOptions): string[] {

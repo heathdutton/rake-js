@@ -10,7 +10,8 @@ import load from './tools/stoplist'
 export interface IOptions {
   delimiters: string[]
   language: languageName
-  optimalPercentage: number
+  optimalPercentage: number,
+  stopwords: string[]
 }
 
 // the actual parameters for the RAKE algorithm
@@ -25,7 +26,7 @@ export function rake(params: IParameters): string[] {
 
   // step 2: loop through all words, generate ngrams/stems/phrases/metrics
   const stemmer = new Stemmer(params.language)
-  const stopwords = load(params.language)
+  const stopwords = load(params.language, params.stopwords)
   const parser = new Parser(stemmer, stopwords).process(wordArray)
 
   // step 3: build a co-occurence matrix for all words (-> stems)

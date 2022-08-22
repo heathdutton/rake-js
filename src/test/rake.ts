@@ -17,7 +17,7 @@ class RAKE {
       delimiters: ['\\s+'],
       language: 'english',
       optimalPercentage: 66.6,
-      stopwords: []
+      stopwords: [],
     }
     const expected = [
       'video games',
@@ -40,7 +40,7 @@ class RAKE {
       delimiters: ['\\s+'],
       language: 'english',
       optimalPercentage: 66.6,
-      stopwords: []
+      stopwords: [],
     }
     const result = rake(input)
     // tslint:disable-next-line
@@ -58,7 +58,7 @@ class RAKE {
       delimiters: ['\\s+'],
       language: 'german',
       optimalPercentage: 66.6,
-      stopwords: []
+      stopwords: [],
     }
     const result = rake(input)
     // tslint:disable-next-line
@@ -76,7 +76,7 @@ class RAKE {
       delimiters: ['\\s+'],
       language: 'german',
       optimalPercentage: 66.6,
-      stopwords: []
+      stopwords: [],
     }
     const result = rake(input)
     // tslint:disable-next-line
@@ -94,7 +94,7 @@ class RAKE {
       delimiters: ['\\s+'],
       language: 'english',
       optimalPercentage: 66.6,
-      stopwords: []
+      stopwords: [],
     }
     const result = rake(input)
     // tslint:disable-next-line

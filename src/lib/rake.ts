@@ -10,7 +10,7 @@ import load from './tools/stoplist'
 export interface IOptions {
   delimiters: string[]
   language: languageName
-  optimalPercentage: number,
+  optimalPercentage: number
   stopwords: string[]
 }
 
